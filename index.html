@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Медоносы и опылители — О.А.З.И.С</title>
+  <meta name="description" content="Медоносные культуры и насекомые-опылители селекционной программы О.А.З.И.С: мордовник, кипрей, фацелия, донник, эспарцет, пчёлы, шмели и мелипонины.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3l11 6.5v13L16 29 5 22.5v-13z' fill='%23D98E1F'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Прогресс прокрутки -->
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <!-- Пчела, летящая за курсором -->
+  <div class="cursor-bee" aria-hidden="true">
+    <svg viewBox="0 0 40 40" width="34" height="34">
+      <ellipse class="wing w1" cx="17" cy="12" rx="6" ry="9" />
+      <ellipse class="wing w2" cx="24" cy="12" rx="6" ry="9" />
+      <ellipse cx="20" cy="23" rx="9" ry="7" fill="#D98E1F" />
+      <path d="M15 17.5v11M20 16v14M25 17.5v11" stroke="#1E1B16" stroke-width="2.4" />
+      <circle cx="29" cy="22" r="3.4" fill="#1E1B16" />
+    </svg>
+  </div>
+
+  <!-- Шапка -->
+  <header class="header">
+    <a href="#top" class="logo" aria-label="О.А.З.И.С — на главную">
+      <svg viewBox="0 0 40 40" width="34" height="34" fill="none" aria-hidden="true">
+        <path class="logo-hex" d="M20 3l14.7 8.5v17L20 37 5.3 28.5v-17z" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M20 12c3.5 3 3.5 13 0 16-3.5-3-3.5-13 0-16z" fill="var(--honey)"/>
+        <path d="M20 20h7M20 20h-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span>О.А.З.И.С</span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#plants">Медоносы</a>
+      <a href="#records">Рекорды</a>
+      <a href="#selection">Селекция</a>
+      <a href="#pollinators">Опылители</a>
+    </nav>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__meta">
+        <span class="eyebrow">Селекция и семеноводство</span>
+        <span class="eyebrow hero__count">8 культур · 3 опылителя</span>
+      </div>
+
+      <h1 class="hero__title">
+        <span class="line"><span class="split">Медоносы</span></span>
+        <span class="line line--indent"><em class="split">&amp;&nbsp;пчёлы</em></span>
+      </h1>
+
+      <div class="hero__bee" data-parallax>
+        <img src="img/honeybee.webp" alt="Медоносная пчела в полёте" width="900" height="1200">
+      </div>
+
+      <div class="hero__bottom">
+        <p class="hero__lead">Травы, которые кормят пчёл, и пчёлы, которые дают жизнь будущим семенам. Селекционная программа медоносных культур и опылителей.</p>
+        <a href="#plants" class="scroll-cue" aria-label="Листать вниз">
+          <span>Листать</span>
+          <i></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Бегущая строка -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Мордовник</span><b>✦</b><span>Кипрей</span><b>✦</b><span>Фацелия</span><b>✦</b><span>Донник</span><b>✦</b><span>Эспарцет</span><b>✦</b><span>Синяк</span><b>✦</b><span>Сараделла</span><b>✦</b><span>Гречиха</span><b>✦</b>
+        <span>Мордовник</span><b>✦</b><span>Кипрей</span><b>✦</b><span>Фацелия</span><b>✦</b><span>Донник</span><b>✦</b><span>Эспарцет</span><b>✦</b><span>Синяк</span><b>✦</b><span>Сараделла</span><b>✦</b><span>Гречиха</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- Манифест -->
+    <section class="manifest container">
+      <span class="eyebrow">01 — Зачем</span>
+      <p class="manifest__text" data-words>Основная культура О.А.З.И.С — подсолнечник — требует перекрёстного опыления насекомыми. Поэтому мы растим не только семена, но и кормовую базу для пчёл: медоносы, которые цветут долго, выделяют нектар в засуху и улучшают почву.</p>
+    </section>
+
+    <!-- Медоносы: горизонтальная прокрутка -->
+    <section class="plants" id="plants">
+      <div class="plants__sticky">
+        <div class="plants__head container">
+          <div>
+            <span class="eyebrow">02 — Медоносные травы</span>
+            <h2 class="h2">Восемь культур<br><em>одного взятка</em></h2>
+          </div>
+          <p class="plants__hint">Нажмите на карточку,<br>чтобы открыть программу</p>
+        </div>
+        <div class="plants__track" id="plantsTrack"><!-- карточки из JS --></div>
+        <div class="plants__bar container"><span id="plantsBar"></span></div>
+      </div>
+    </section>
+
+    <!-- Рекорды -->
+    <section class="records container" id="records">
+      <span class="eyebrow">03 — Рекорды</span>
+      <h2 class="h2">Чемпионы<br><em>медосбора</em></h2>
+
+      <div class="records__grid">
+        <article class="record">
+          <div class="record__num"><span data-count="1200">0</span><small>кг/га</small></div>
+          <h3>Мордовник шароголовый</h3>
+          <p>До 1200 кг мёда с гектара сплошных зарослей. «Король медоносов» конкурирует по нектару только с липой.</p>
+          <div class="record__bar"><i style="--w:100%"></i></div>
+        </article>
+        <article class="record">
+          <div class="record__num"><span data-count="1000">0</span><small>кг/га</small></div>
+          <h3>Кипрей узколистный</h3>
+          <p>До 1 тонны мёда с гектара. Цветёт с конца июня по середину августа, даёт прозрачный «снежный» мёд.</p>
+          <div class="record__bar"><i style="--w:83%"></i></div>
+        </article>
+        <article class="record">
+          <div class="record__num"><span data-count="35">0</span><small>дней</small></div>
+          <h3>Главный взяток</h3>
+          <p>Мордовник цветёт 30–35 дней в разгар лета и выделяет нектар весь световой день — пчёлы работают до сумерек.</p>
+          <div class="record__bar"><i style="--w:58%"></i></div>
+        </article>
+        <article class="record">
+          <div class="record__num"><span data-count="1.5" data-decimals="1">0</span><small>м</small></div>
+          <h3>Корни донника</h3>
+          <p>Мощная корневая система разрыхляет почву на глубину до 1,5 метра и обогащает её азотом и фосфором.</p>
+          <div class="record__bar"><i style="--w:42%"></i></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Селекция: интерактивный фильтр -->
+    <section class="selection" id="selection">
+      <div class="container">
+        <span class="eyebrow">04 — Направления селекции</span>
+        <h2 class="h2">Что мы <em>улучшаем</em></h2>
+        <p class="selection__lead">Выберите признак — и увидите, в каких программах он ведётся.</p>
+
+        <div class="chips" id="chips" role="group" aria-label="Признаки селекции"></div>
+
+        <ul class="matrix" id="matrix"></ul>
+      </div>
+    </section>
+
+    <!-- Опылители -->
+    <section class="pollinators" id="pollinators">
+      <div class="container pollinators__intro">
+        <span class="eyebrow">05 — Насекомые-опылители</span>
+        <h2 class="h2">Опыление для<br><em>будущих семян</em></h2>
+        <p>В зависимости от площади посева и задач селекционной работы мы используем разные варианты опыления — выбираем опылителя под задачу.</p>
+      </div>
+
+      <div class="stack container">
+        <article class="pol" style="--i:0">
+          <div class="pol__text">
+            <span class="pol__tag">Основной опылитель</span>
+            <h3 class="pol__title">Пчёлы</h3>
+            <p class="pol__sub">Управляемое опыление на полевых участках гибридизации.</p>
+            <p>Пчёлы — основной опылитель на наших полях. Ежегодно используется более 10 тыс. пчелосемей, а при росте производства их количество будет увеличиваться.</p>
+            <p>С 2025 года реализуется проект собственной пчелиной фермы — не менее 5 тыс. пчелосемей. Для этого выделен участок луга 20 га, строится полностью автоматическая линия по производству мёда и современные омшаники.</p>
+            <dl class="pol__stats">
+              <div><dt><span data-count="10000">0</span>+</dt><dd>пчелосемей на участках гибридизации</dd></div>
+              <div><dt><span data-count="5000">0</span>+</dt><dd>пчелосемей в проекте фермы</dd></div>
+              <div><dt><span data-count="20">0</span> га</dt><dd>выделенного луга</dd></div>
+            </dl>
+          </div>
+          <div class="pol__img"><img src="img/honeybee.webp" alt="Медоносная пчела" loading="lazy" width="900" height="1200"></div>
+        </article>
+
+        <article class="pol" style="--i:1">
+          <div class="pol__text">
+            <span class="pol__tag">Для групповых изоляторов</span>
+            <h3 class="pol__title">Шмели</h3>
+            <p class="pol__sub">Опыление в замкнутых условиях и при сложной погоде.</p>
+            <p>На участках с групповыми изоляторами площадью от 10 до 500 м² мы используем шмелей. В отличие от пчёл, они работают в замкнутых помещениях, при температуре от +10 °C, в пасмурную погоду и при сильном ветре.</p>
+            <p>Минус — более высокая стоимость опыления и риск укусов персонала. В планах — собственное производство шмелиных семей в высокотехнологичных ульях-боксах.</p>
+            <dl class="pol__stats">
+              <div><dt>10–500 м²</dt><dd>площадь изоляторов</dd></div>
+              <div><dt>от +10 °C</dt><dd>работа в холод</dd></div>
+              <div><dt>Ульи-боксы</dt><dd>своё производство в планах</dd></div>
+            </dl>
+          </div>
+          <div class="pol__img"><img src="img/bumblebee.webp" alt="Шмель в полёте" loading="lazy" width="900" height="1200"></div>
+        </article>
+
+        <article class="pol" style="--i:2">
+          <div class="pol__text">
+            <span class="pol__tag">Экспериментальное направление</span>
+            <h3 class="pol__title">Мелипонины</h3>
+            <p class="pol__sub">Безжалые тропические пчёлы для групповых изоляторов.</p>
+            <p>Чтобы снизить риск укусов персонала во время цветения, мы проводим эксперимент по опылению безжалыми тропическими пчёлами. В 2027 году первые партии прибудут на нашу станцию — будем рады поделиться опытом.</p>
+            <p>Если опыт будет признан успешным, эти насекомые могут взять на себя до 50 % опыления групповых изоляторов.</p>
+            <dl class="pol__stats">
+              <div><dt><span data-count="2027" data-plain>0</span></dt><dd>прибытие первых партий</dd></div>
+              <div><dt>Без жала</dt><dd>минимум рисков для персонала</dd></div>
+              <div><dt>до <span data-count="50">0</span> %</dt><dd>доля опыления изоляторов</dd></div>
+            </dl>
+          </div>
+          <div class="pol__img"><img src="img/melipona.webp" alt="Безжалая пчела мелипонина" loading="lazy" width="900" height="1200"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Полноэкранный луг -->
+    <section class="meadow">
+      <div class="meadow__img"><img src="img/meadow.webp" alt="Летний луг медоносных трав" loading="lazy" width="1600" height="900"></div>
+      <blockquote class="meadow__quote">
+        <p>«Мордовник выделяет нектар даже в&nbsp;сильную засуху и&nbsp;жару выше +30&nbsp;°C, когда другие медоносы полностью выгорают».</p>
+      </blockquote>
+    </section>
+
+  </main>
+
+  <footer class="footer container">
+    <div class="footer__big">О.А.З.И.С</div>
+    <div class="footer__row">
+      <span>Селекция и семеноводство</span>
+      <nav aria-label="Навигация в подвале">
+        <a href="#plants">Медоносы</a>
+        <a href="#selection">Селекция</a>
+        <a href="#pollinators">Опылители</a>
+        <a href="#top">Наверх ↑</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Панель с подробностями о культуре -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__overlay" data-close></div>
+    <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <button class="drawer__close" data-close aria-label="Закрыть">×</button>
+      <div class="drawer__img"><img id="drawerImg" src="" alt=""></div>
+      <div class="drawer__body">
+        <span class="eyebrow" id="drawerKind"></span>
+        <h2 class="drawer__title" id="drawerTitle"></h2>
+        <p class="drawer__latin" id="drawerLatin"></p>
+        <div id="drawerText"></div>
+        <h3 class="drawer__h">Направления селекции</h3>
+        <ol class="drawer__list" id="drawerList"></ol>
+        <div class="drawer__nav">
+          <button id="drawerPrev">← Предыдущая</button>
+          <button id="drawerNext">Следующая →</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
